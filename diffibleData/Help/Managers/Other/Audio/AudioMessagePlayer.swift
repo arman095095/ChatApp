@@ -81,7 +81,7 @@ open class AudioMessagePlayer: NSObject {
                 let name = "\(UUID().uuidString).m4a"
                 let newURL = FileManager.getDocumentsDirectory().appendingPathComponent(name)
                 guard let _ = try? data.write(to: newURL) else { return }
-                try! RealmManager.instance?.write { (message as! MMessage).audioURL = name }
+                try! RealmManager.realm?.write { (message as! MMessage).audioURL = name }
                 guard let player = try? AVAudioPlayer(contentsOf: newURL) else { return }
                 self?.play(player: player, audioCell: audioCell, message: message)
                 (audioCell as! AudioMessageCellCustom).activityIndicator.completeLoading(success: true)

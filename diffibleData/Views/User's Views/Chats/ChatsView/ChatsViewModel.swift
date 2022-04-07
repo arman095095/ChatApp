@@ -98,7 +98,7 @@ extension ChatsViewModel {
     }
     
     private func initObservers() {
-        token = RealmManager.instance?.observe { [weak self] (_, _) in
+        token = RealmManager.realm?.observe { [weak self] (_, _) in
             guard let self = self else { return }
             self.waitingChats = self.chatManager.waitingChatsBase.filter { self.currentUser.id != $0.hideForID && $0.lastMessage != nil }.sorted { $0.lastMessage!.date! > $1.lastMessage!.date! }
             self.activeChats = self.chatManager.activeChatsBase.filter { !$0.listMessages.isEmpty }.sorted { $0.lastMessage!.date! > $1.lastMessage!.date! }

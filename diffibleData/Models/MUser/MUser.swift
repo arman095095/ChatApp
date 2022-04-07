@@ -46,19 +46,19 @@ class MUser: Object {
 extension MUser {
     
     func removeUser() {
-        try! RealmManager.instance?.write {
+        try! RealmManager.realm?.write {
             self.removed = true
         }
     }
     
     func recoverUser() {
-        try! RealmManager.instance?.write {
+        try! RealmManager.realm?.write {
             self.removed = false
         }
     }
     
     func updateInfo(with user: MUser) {
-        try! RealmManager.instance?.write {
+        try! RealmManager.realm?.write {
             self.userName = user.userName
             self.imageUrl = user.imageUrl
             self.info = user.info

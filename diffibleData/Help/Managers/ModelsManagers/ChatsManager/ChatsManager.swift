@@ -35,7 +35,7 @@ class ChatsManager {
     
     init(managerModel: ManagersModelContainerProtocol) {
         self.managerModel = managerModel
-        self.chats = RealmManager.instance!.objects(MChat.self)
+        self.chats = RealmManager.realm!.objects(MChat.self)
         self.activeChatsBase = chats.filter("active == %@", true)
         self.waitingChatsBase = chats.filter("active == %@", false)
         initListeners()
@@ -96,8 +96,8 @@ extension ChatsManager {
         if let index = currentUser.friendsIds.firstIndex(of: chat.friendID!) {
             currentUser.friendsIds.remove(at: index)
         }
-        try! RealmManager.instance?.write {
-            RealmManager.instance?.delete(chat)
+        try! RealmManager.realm?.write {
+            RealmManager.realm?.delete(chat)
         }
         sendNotificationForTabBarBadge(type: .updateChatsBadge,error: nil)
     }
@@ -161,7 +161,7 @@ extension ChatsManager {
                 switch result {
                 case .success:
                     i += 1
-                    try! RealmManager.instance?.write {
+                    try! RealmManager.realm?.write {
                         message.date = Date()
                         message.sendingStatus = MMessage.Status.sended.rawValue
                     }
@@ -179,14 +179,14 @@ extension ChatsManager {
     }
     
     func markMessageSended(message: MMessage, chat: MChat) {
-        try! RealmManager.instance?.write {
+        try! RealmManager.realm?.write {
             message.date = Date()
             message.sendingStatus = MMessage.Status.sended.rawValue
         }
         guard let index = chat.notSendedMessages.firstIndex(where: { $0.id == message.id }) else { return }
         let removed = chat.notSendedMessages[index]
         chat.append(notLooked: removed)
-        try! RealmManager.instance?.write {
+        try! RealmManager.realm?.write {
             chat.notSendedMessages.remove(at: index)
         }
     }
@@ -195,7 +195,7 @@ extension ChatsManager {
         friendIds.forEach { friendID in
             guard let firstChat = self.chat(friendID: friendID) else { return }
             if firstChat.notLookedMessages.isEmpty { return }
-            try! RealmManager.instance?.write {
+            try! RealmManager.realm?.write {
                 firstChat.notLookedMessages.forEach { $0.sendingStatus = MMessage.Status.looked.rawValue }
             }
             firstChat.removeNotLookedMessages()
@@ -206,7 +206,7 @@ extension ChatsManager {
     }
     
     func changeChatStatusSend(chat: MChat) {
-        try! RealmManager.instance?.write { chat.active = true }
+        try! RealmManager.realm?.write { chat.active = true }
         notificationFriendChatChangerStatus(chat: chat)
         sendNotificationForChats(type: .info, userInfo: ("Успешно", "Чат стал активным"))
     }
@@ -245,7 +245,7 @@ extension ChatsManager {
     }
     
     private func fromWaitingToActive(chat: MChat, message: MMessage) {
-        try! RealmManager.instance?.write { chat.active = true }
+        try! RealmManager.realm?.write { chat.active = true }
         chat.append(waiting: message)
         chat.append(message)
         sendNotificationForChats(type: .chatChangedFromWaitingToActive, userInfo: chat)
@@ -258,7 +258,7 @@ extension ChatsManager {
         chat.append(waiting: message)
         chat.append(message)
         chat.hideForID = currentUser.id
-        try! RealmManager.instance?.write { RealmManager.instance?.add(chat) }
+        try! RealmManager.realm?.write { RealmManager.realm?.add(chat) }
         return chat
     }
 }
@@ -270,7 +270,7 @@ extension ChatsManager {
         if let urlString = message.photoURL, let url = URL(string: urlString) {
             FirebaseStorageManager.shared.deleteDataFrom(url: url)
         }
-        try! RealmManager.instance?.write {
+        try! RealmManager.realm?.write {
             message.imageData = image.jpegData(compressionQuality: 0.4)
             message.photoURL = nil
         }
@@ -367,7 +367,7 @@ private extension ChatsManager {
     func recievedStatusChange(senderID: String, chatID: String) {
         if let firstChat = waitingChatsBase.first(where: { $0.friendID == senderID }) {
             self.sendNotificationForChats(type: .chatChangedFromWaitingToActive, userInfo: firstChat)
-            try! RealmManager.instance?.write { firstChat.active = true }
+            try! RealmManager.realm?.write { firstChat.active = true }
         }
     }
     
@@ -385,7 +385,7 @@ private extension ChatsManager {
     }
     
     func fromWaitingToActive(chat: MChat, messages: [MMessage]) {
-        try! RealmManager.instance?.write { chat.active = true }
+        try! RealmManager.realm?.write { chat.active = true }
         chat.append(ofNew: messages)
         chat.append(of: messages)
         sendNotificationForChats(type: .chatChangedFromWaitingToActive, userInfo: chat)
@@ -398,7 +398,7 @@ private extension ChatsManager {
         let chat = MChat(friend: messages.first!.senderUser!, current: currentUser)
         chat.append(of: messages)
         chat.append(ofNew: messages)
-        try! RealmManager.instance?.write { RealmManager.instance?.add(chat) }
+        try! RealmManager.realm?.write { RealmManager.realm?.add(chat) }
         sendNotificationForChats(type: .newWaitingChatRequest, userInfo: chat)
     }
     
@@ -506,7 +506,7 @@ private extension ChatsManager {
             }
         })
         
-        token = RealmManager.instance?.observe({ [weak self] (notif, realm) in
+        token = RealmManager.realm?.observe({ [weak self] (notif, realm) in
             guard let self = self else { return }
             self.chats = realm.objects(MChat.self)
             self.activeChatsBase = self.chats.filter("active == %@", true)
@@ -610,7 +610,7 @@ extension ChatsManager {
             self.firestoreManager.checkTypingStatus(chat: activeChat) { [weak self] (result) in
                 index += 1
                 if result != activeChat.typing {
-                    try! RealmManager.instance?.write { activeChat.typing = result }
+                    try! RealmManager.realm?.write { activeChat.typing = result }
                     changedChats.append(activeChat)
                 }
                 if index == count && !changedChats.isEmpty {
@@ -647,7 +647,7 @@ extension ChatsManager {
         var typingChats = [MChat]()
         friendIDs.forEach { id in
             if let chat = activeChat(friendID: id) {
-                try! RealmManager.instance?.write { chat.typing = typing }
+                try! RealmManager.realm?.write { chat.typing = typing }
                 typingChats.append(chat)
                 self.sendNotificationForMessenger(type: .chatEdited, userInfo: chat)
             }

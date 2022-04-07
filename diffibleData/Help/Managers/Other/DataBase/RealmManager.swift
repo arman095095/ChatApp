@@ -11,11 +11,8 @@ import Realm
 
 class RealmManager {
     
-    private static var realm: Realm?
+    private(set) static var realm: Realm?
     private static var count: Int = 0
-    static var instance: Realm? {
-        return realm
-    }
     
     static func initiate(userID: String) {
         guard count == 0 else { return }
