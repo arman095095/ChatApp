@@ -62,7 +62,6 @@
 		EE45621824048DCA001527A3 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45621724048DCA001527A3 /* UIImageView + Extension.swift */; };
 		EE4D8BA9259A352500FBEFB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D8BA8259A352400FBEFB3 /* Constants.swift */; };
 		EE4D8BCF259A445200FBEFB3 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D8BCE259A445200FBEFB3 /* SmallButton.swift */; };
-		EE4EB67B25609FCA0042FF46 /* GoogleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB67A25609FCA0042FF46 /* GoogleAuthManager.swift */; };
 		EE4EB67E2560A2E20042FF46 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB67D2560A2E20042FF46 /* SignUpViewModel.swift */; };
 		EE4EB685256129B90042FF46 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB684256129B90042FF46 /* LoginViewModel.swift */; };
 		EE4EB688256129E10042FF46 /* MainAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB687256129E10042FF46 /* MainAuthViewModel.swift */; };
@@ -200,7 +199,6 @@
 		EE45621724048DCA001527A3 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		EE4D8BA8259A352400FBEFB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE4D8BCE259A445200FBEFB3 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
-		EE4EB67A25609FCA0042FF46 /* GoogleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthManager.swift; sourceTree = "<group>"; };
 		EE4EB67D2560A2E20042FF46 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EE4EB684256129B90042FF46 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EE4EB687256129E10042FF46 /* MainAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAuthViewModel.swift; sourceTree = "<group>"; };
@@ -791,7 +789,6 @@
 			isa = PBXGroup;
 			children = (
 				EEAF7456240534BC0050634E /* FirebaseAuthManager.swift */,
-				EE4EB67A25609FCA0042FF46 /* GoogleAuthManager.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1209,7 +1206,6 @@
 				EE83DB3225913C030003A89D /* InternetConnectionManager.swift in Sources */,
 				EE42AFA22590EA8700F41B21 /* MChat + Extension.swift in Sources */,
 				EEC82FC42403E3730071362D /* Gradient.swift in Sources */,
-				EE4EB67B25609FCA0042FF46 /* GoogleAuthManager.swift in Sources */,
 				EE24B143256C08400044121A /* UsersManager.swift in Sources */,
 				EE4EB688256129E10042FF46 /* MainAuthViewModel.swift in Sources */,
 				EE362D14256E99EC00846C5A /* UIApplication + Exstension.swift in Sources */,
