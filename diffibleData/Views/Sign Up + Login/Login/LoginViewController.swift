@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftUI
-import GoogleSignIn
 
 class LoginViewController:UIViewController {
     
@@ -16,10 +15,7 @@ class LoginViewController:UIViewController {
     private let contentView = UIView()
     private var loginStack: UIStackView!
     private let helloLabel = UILabel(text: "Мы рады Вас видеть!",font: UIFont.avenir26())
-    private let googleButton = LoadButton(title: "Google", backgroundColor: .white, titleColor: .black, shadow: true,google: true,height: 60, activityColor: .black)
-    private let googleLabel = UILabel(text: "Выполнить вход с помощью")
     private let loginButton = LoadButton(title: "Login", backgroundColor: .buttonDark(), titleColor: .white,height: 60, activityColor: .white)
-    private let orLabel = UILabel(text: "или")
     private let emailTextField = UITextField()
     private let emailLabel = UILabel(text: "Email")
     private let passwordTextField = UITextField()
@@ -54,11 +50,6 @@ class LoginViewController:UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
         
-    @objc private func googleTapped() {
-        googleButton.loading()
-        loginViewModel.signInWithGoogle(present: self)
-    }
-        
     @objc private func signInTapped() {
         dismiss(animated: true) {
             self.delegate?.goToSignInVC()
@@ -84,14 +75,12 @@ private extension LoginViewController {
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.loginButton.stop()
-                self.googleButton.stop()
             }
         }
         
         loginViewModel.successFullLoginHandler = { [weak self] muser in
             guard let self = self else { return }
             Alert.present(type: .success, title: "Вы успешно авторизованы")
-            self.googleButton.stop()
             self.loginButton.stop()
             let tabVC = Builder.shared.mainTabBarController(currentUser: muser)
             self.present(tabVC, animated: true, completion: nil)
@@ -100,7 +89,6 @@ private extension LoginViewController {
         loginViewModel.successPartLoginHandler = { [weak self] user in
             guard let self = self else { return }
             self.loginButton.stop()
-            self.googleButton.stop()
             let setupVC = Builder.shared.firstAddInfoVC(currentUser: user, authManager: self.loginViewModel.authManagers.authManager)
             self.present(setupVC, animated: true, completion: nil)
         }
@@ -112,14 +100,12 @@ private extension LoginViewController {
             } complitionDeny: {
                 self.loginViewModel.cancelRecover()
                 self.loginButton.stop()
-                self.googleButton.stop()
             }
         }
         loginViewModel.successRecoverHandler = { [weak self] user in
             guard let self = self else { return }
             Alert.present(type: .success, title: "Ваш профиль восстановлен")
             self.loginButton.stop()
-            self.googleButton.stop()
             let tabVC = Builder.shared.mainTabBarController(currentUser: user)
             self.present(tabVC, animated: true, completion: nil)
         }
@@ -133,7 +119,6 @@ private extension LoginViewController {
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.loginButton.stop()
-                self.googleButton.stop()
             }
         }
     }
@@ -161,7 +146,7 @@ private extension LoginViewController {
         scrollView.contentSize = .zero
         if notification.name == UIResponder.keyboardWillShowNotification {
             let contentSize = view.safeAreaLayoutGuide.layoutFrame.height + keyboardHeight
-            let offset = helloLabel.frame.maxY + googleButton.frame.maxY
+            let offset = helloLabel.frame.maxY // исправить
             scrollView.contentOffset.y = offset
             scrollView.contentSize.height = contentSize
         }
@@ -191,12 +176,11 @@ private extension LoginViewController {
         helloLabel.textAlignment = .center
         helloLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let googleView = UIView(button: googleButton, label: googleLabel, spacing: 12)
         let emailView = UIView(textField: emailTextField, label: emailLabel, spacing: 12)
         let passwordView = UIView(textField: passwordTextField, label: passwordLabel, spacing: 12)
         let signView = UIView(button: signInButton, label: signInLabel)
         
-        loginStack = UIStackView(arrangedSubviews: [googleView,orLabel,emailView,passwordView,loginButton], spacing: 15, axis: .vertical)
+        loginStack = UIStackView(arrangedSubviews: [emailView,passwordView,loginButton], spacing: 15, axis: .vertical)
         
         self.contentView.addSubview(loginStack)
         self.contentView.addSubview(helloLabel)
@@ -219,6 +203,5 @@ private extension LoginViewController {
         passwordTextField.isSecureTextEntry = true
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
-        googleButton.addTarget(self, action: #selector(googleTapped), for: .touchUpInside)
     }
 }

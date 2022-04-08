@@ -13,41 +13,19 @@ class MainAuthViewModel {
     private var authManager: FirebaseAuthManager {
         return authManagers.authManager
     }
-    private var googleAuthManager: GoogleAuthManager {
-        return authManagers.googleAuthManager
-    }
+
     var authManagers: AuthManagersContainerProtocol
     
     init(authManagers: AuthManagersContainerProtocol) {
         self.authManagers = authManagers
     }
     
-    var successLoginHandler: ((MUser) -> ())? {
-        didSet {
-            googleAuthManager.successLoginHandler = successLoginHandler
-        }
-    }
-    var successSignUpHandler: ((User) -> ())? {
-        didSet {
-            googleAuthManager.successSignUpHandler = successSignUpHandler
-        }
-    }
-    var failureSignUpHandler: ((Error) -> ())? {
-        didSet {
-            googleAuthManager.failureSignUpHandler = failureSignUpHandler
-        }
-    }
-    var removedUserHandler: ((MUser, Error) -> ())? {
-        didSet {
-            googleAuthManager.removedUserHandler = removedUserHandler
-        }
-    }
+    var successLoginHandler: ((MUser) -> ())?
+    var successSignUpHandler: ((User) -> ())?
+    var failureSignUpHandler: ((Error) -> ())?
+    var removedUserHandler: ((MUser, Error) -> ())?
     var successRecoverHandler: ((MUser) -> ())?
     var failureRecoverHandler: ((Error) -> ())?
-    
-    func signInWithGoogle(present: UIViewController) {
-        googleAuthManager.googleSignIn(presenting: present)
-    }
     
     func cancelRecover() {
         FirebaseAuthManager.signOut(complition: { _ in  })

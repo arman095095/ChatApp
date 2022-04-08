@@ -10,9 +10,6 @@ import FirebaseAuth
 
 class LoginViewModel {
     
-    private var googleAuthManager: GoogleAuthManager {
-        return authManagers.googleAuthManager
-    }
     private var authManager: FirebaseAuthManager {
         return authManagers.authManager
     }
@@ -22,35 +19,15 @@ class LoginViewModel {
         self.authManagers = authManagers
     }
     
-    var successFullLoginHandler: ((MUser) -> ())? {
-        didSet {
-            googleAuthManager.successLoginHandler = successFullLoginHandler
-        }
-    }
-    var successPartLoginHandler: ((User) -> ())? {
-        didSet {
-            googleAuthManager.successSignUpHandler = successPartLoginHandler
-        }
-    }
-    var failureSignUpHandler: ((Error) -> ())? {
-        didSet {
-            googleAuthManager.failureSignUpHandler = failureSignUpHandler
-        }
-    }
-    var removedUserHandler: ((MUser, Error) -> ())? {
-        didSet {
-            googleAuthManager.removedUserHandler = removedUserHandler
-        }
-    }
+    var successFullLoginHandler: ((MUser) -> ())?
+    var successPartLoginHandler: ((User) -> ())?
+    var failureSignUpHandler: ((Error) -> ())?
+    var removedUserHandler: ((MUser, Error) -> ())?
     var successRecoverHandler: ((MUser) -> ())?
     var failureRecoverHandler: ((Error) -> ())?
     
     
     let checker = Validator()
-    
-    func signInWithGoogle(present: UIViewController) {
-        googleAuthManager.googleSignIn(presenting: present)
-    }
     
     func recoverProfile(user: MUser) {
         user.recoverUser()

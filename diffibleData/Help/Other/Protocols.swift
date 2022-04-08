@@ -114,9 +114,8 @@ protocol ProfileManagersContainerProtocol: AnyObject {
 }
 
 protocol AuthManagersContainerProtocol: AnyObject {
-    init(authManager: FirebaseAuthManager, googleAuthManager: GoogleAuthManager)
+    init(authManager: FirebaseAuthManager)
     var authManager: FirebaseAuthManager { get }
-    var googleAuthManager: GoogleAuthManager { get }
 }
 
 protocol ManagersModelContainerProtocol: AnyObject {

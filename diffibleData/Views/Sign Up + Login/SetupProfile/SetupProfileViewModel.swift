@@ -10,6 +10,7 @@ import FirebaseAuth
 import RxCocoa
 import RxSwift
 import RxRelay
+import UIKit
 
 class SetupProfileViewModel {
     

@@ -41,7 +41,7 @@ class MessangerViewController: MessagesViewController {
         addGesture()
         setupBinding()
         setupTopBar()
-        messagesCollectionView.scrollToBottom(animated: false)
+        messagesCollectionView.scrollToLastItem(animated: false)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -56,13 +56,13 @@ private extension MessangerViewController {
     
     func updateWithNewSendedMessage(message: MessageType) {
         messagesCollectionView.reloadData()
-        messagesCollectionView.scrollToBottom(animated: true)
+        messagesCollectionView.scrollToLastItem(animated: true)
     }
     
     func updateWithNewRecivedMessages(messages: [MessageType]) {
         if messagesCollectionView.indexPathsForVisibleItems.contains(IndexPath(item: 0, section: messagesCollectionView.numberOfSections - 1)) && messages.count < 3 {
             self.messagesCollectionView.reloadData()
-            self.messagesCollectionView.scrollToBottom(animated: true)
+            self.messagesCollectionView.scrollToLastItem(animated: true)
         } else {
             self.messagesCollectionView.reloadData()
         }

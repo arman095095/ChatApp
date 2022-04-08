@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import SwiftDate
 import RealmSwift
+import UIKit
 
 class ChatsManager {
     

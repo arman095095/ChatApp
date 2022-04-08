@@ -3,11 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE49A6AFB736A9888101D3FA /* Pods_diffibleData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182699F2B671E248BCFCF273 /* Pods_diffibleData.framework */; };
+		8F17C52928005A4C008987DF /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C52828005A4C008987DF /* MessageKit */; };
+		8F17C52C28005AB9008987DF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C52B28005AB9008987DF /* SDWebImage */; };
+		8F17C52E28005AB9008987DF /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C52D28005AB9008987DF /* SDWebImageMapKit */; };
+		8F17C53128005B69008987DF /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C53028005B69008987DF /* SwiftDate */; };
+		8F17C53428005BC5008987DF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C53328005BC5008987DF /* RxCocoa */; };
+		8F17C53628005BC5008987DF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C53528005BC5008987DF /* RxRelay */; };
+		8F17C53828005BC5008987DF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C53728005BC5008987DF /* RxSwift */; };
+		8F17C53B28005CE1008987DF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C53A28005CE1008987DF /* RealmSwift */; };
+		8F17C53E28005D76008987DF /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C53D28005D76008987DF /* SwiftEntryKit */; };
+		8F17C54128005E5E008987DF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C54028005E5E008987DF /* FirebaseAuth */; };
+		8F17C54328005E5E008987DF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C54228005E5E008987DF /* FirebaseFirestore */; };
+		8F17C54528005E5E008987DF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8F17C54428005E5E008987DF /* FirebaseStorage */; };
 		EE01F89E25715BDD00A66E7C /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE01F89D25715BDD00A66E7C /* ButtonsView.swift */; };
 		EE162FEB25A20DB400283614 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE162FEA25A20DB400283614 /* UserDefaultManager.swift */; };
 		EE162FF125A21A6500283614 /* FirestoreManager + Extension Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE162FF025A21A6500283614 /* FirestoreManager + Extension Profile.swift */; };
@@ -146,9 +157,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		182699F2B671E248BCFCF273 /* Pods_diffibleData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diffibleData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2B7424591D32BBCB50ECF90 /* Pods-diffibleData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diffibleData.release.xcconfig"; path = "Target Support Files/Pods-diffibleData/Pods-diffibleData.release.xcconfig"; sourceTree = "<group>"; };
-		E4BC9745269524D18171A844 /* Pods-diffibleData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-diffibleData.debug.xcconfig"; path = "Target Support Files/Pods-diffibleData/Pods-diffibleData.debug.xcconfig"; sourceTree = "<group>"; };
 		EE01F89D25715BDD00A66E7C /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		EE162FEA25A20DB400283614 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		EE162FF025A21A6500283614 /* FirestoreManager + Extension Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreManager + Extension Profile.swift"; sourceTree = "<group>"; };
@@ -293,21 +301,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE49A6AFB736A9888101D3FA /* Pods_diffibleData.framework in Frameworks */,
+				8F17C53B28005CE1008987DF /* RealmSwift in Frameworks */,
+				8F17C54128005E5E008987DF /* FirebaseAuth in Frameworks */,
+				8F17C53628005BC5008987DF /* RxRelay in Frameworks */,
+				8F17C53128005B69008987DF /* SwiftDate in Frameworks */,
+				8F17C52C28005AB9008987DF /* SDWebImage in Frameworks */,
+				8F17C54528005E5E008987DF /* FirebaseStorage in Frameworks */,
+				8F17C53428005BC5008987DF /* RxCocoa in Frameworks */,
+				8F17C53E28005D76008987DF /* SwiftEntryKit in Frameworks */,
+				8F17C52E28005AB9008987DF /* SDWebImageMapKit in Frameworks */,
+				8F17C52928005A4C008987DF /* MessageKit in Frameworks */,
+				8F17C54328005E5E008987DF /* FirebaseFirestore in Frameworks */,
+				8F17C53828005BC5008987DF /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2DB866619BFC092947FC6958 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				182699F2B671E248BCFCF273 /* Pods_diffibleData.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		EE01F88F2571503600A66E7C /* Posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,8 +955,6 @@
 			children = (
 				EEF2FEF023FD9CF400E67F56 /* diffibleData */,
 				EEF2FEEF23FD9CF400E67F56 /* Products */,
-				FDCED538295F21FA11706D35 /* Pods */,
-				2DB866619BFC092947FC6958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1069,15 +1078,6 @@
 			path = NetworkManagers;
 			sourceTree = "<group>";
 		};
-		FDCED538295F21FA11706D35 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E4BC9745269524D18171A844 /* Pods-diffibleData.debug.xcconfig */,
-				A2B7424591D32BBCB50ECF90 /* Pods-diffibleData.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1085,18 +1085,29 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEF2FF0523FD9CF500E67F56 /* Build configuration list for PBXNativeTarget "diffibleData" */;
 			buildPhases = (
-				14F3FC9D2A0DF21A8EB97388 /* [CP] Check Pods Manifest.lock */,
 				EEF2FEEA23FD9CF400E67F56 /* Sources */,
 				EEF2FEEB23FD9CF400E67F56 /* Frameworks */,
 				EEF2FEEC23FD9CF400E67F56 /* Resources */,
-				A82351A06BF3027FD402A3E4 /* [CP] Embed Pods Frameworks */,
-				13DFE8952F26D3AF5C2FADEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = diffibleData;
+			packageProductDependencies = (
+				8F17C52828005A4C008987DF /* MessageKit */,
+				8F17C52B28005AB9008987DF /* SDWebImage */,
+				8F17C52D28005AB9008987DF /* SDWebImageMapKit */,
+				8F17C53028005B69008987DF /* SwiftDate */,
+				8F17C53328005BC5008987DF /* RxCocoa */,
+				8F17C53528005BC5008987DF /* RxRelay */,
+				8F17C53728005BC5008987DF /* RxSwift */,
+				8F17C53A28005CE1008987DF /* RealmSwift */,
+				8F17C53D28005D76008987DF /* SwiftEntryKit */,
+				8F17C54028005E5E008987DF /* FirebaseAuth */,
+				8F17C54228005E5E008987DF /* FirebaseFirestore */,
+				8F17C54428005E5E008987DF /* FirebaseStorage */,
+			);
 			productName = diffibleData;
 			productReference = EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */;
 			productType = "com.apple.product-type.application";
@@ -1125,6 +1136,15 @@
 				Base,
 			);
 			mainGroup = EEF2FEE523FD9CF400E67F56;
+			packageReferences = (
+				8F17C52728005A4C008987DF /* XCRemoteSwiftPackageReference "MessageKit" */,
+				8F17C52A28005AB9008987DF /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				8F17C52F28005B69008987DF /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				8F17C53228005BC5008987DF /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8F17C53928005CE0008987DF /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8F17C53C28005D76008987DF /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+				8F17C53F28005E5E008987DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EEF2FEEF23FD9CF400E67F56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1157,65 +1177,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		13DFE8952F26D3AF5C2FADEE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-diffibleData/Pods-diffibleData-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-diffibleData/Pods-diffibleData-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-diffibleData/Pods-diffibleData-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		14F3FC9D2A0DF21A8EB97388 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-diffibleData-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A82351A06BF3027FD402A3E4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-diffibleData/Pods-diffibleData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-diffibleData/Pods-diffibleData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-diffibleData/Pods-diffibleData-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEF2FEEA23FD9CF400E67F56 /* Sources */ = {
@@ -1478,7 +1439,6 @@
 		};
 		EEF2FF0623FD9CF500E67F56 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4BC9745269524D18171A844 /* Pods-diffibleData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1500,7 +1460,6 @@
 		};
 		EEF2FF0723FD9CF500E67F56 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2B7424591D32BBCB50ECF90 /* Pods-diffibleData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1542,6 +1501,128 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F17C52728005A4C008987DF /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		8F17C52A28005AB9008987DF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		8F17C52F28005B69008987DF /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8F17C53228005BC5008987DF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		8F17C53928005CE0008987DF /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8F17C53C28005D76008987DF /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		8F17C53F28005E5E008987DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F17C52828005A4C008987DF /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C52728005A4C008987DF /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+		8F17C52B28005AB9008987DF /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C52A28005AB9008987DF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		8F17C52D28005AB9008987DF /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C52A28005AB9008987DF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		8F17C53028005B69008987DF /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C52F28005B69008987DF /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		8F17C53328005BC5008987DF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53228005BC5008987DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8F17C53528005BC5008987DF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53228005BC5008987DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8F17C53728005BC5008987DF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53228005BC5008987DF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		8F17C53A28005CE1008987DF /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53928005CE0008987DF /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		8F17C53D28005D76008987DF /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53C28005D76008987DF /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
+		};
+		8F17C54028005E5E008987DF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53F28005E5E008987DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8F17C54228005E5E008987DF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53F28005E5E008987DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8F17C54428005E5E008987DF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F17C53F28005E5E008987DF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEF2FEE623FD9CF400E67F56 /* Project object */;
 }

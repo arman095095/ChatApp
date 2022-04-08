@@ -10,6 +10,7 @@ import FirebaseFirestore
 import FirebaseAuth
 import Foundation
 import FirebaseStorage
+import UIKit
 
 //MARK: Upload
 class FirebaseStorageManager {

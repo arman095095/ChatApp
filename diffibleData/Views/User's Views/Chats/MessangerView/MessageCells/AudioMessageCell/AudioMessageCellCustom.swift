@@ -7,6 +7,7 @@
 //
 
 import MessageKit
+import UIKit
 
 open class AudioMessageCellCustom: AudioMessageCell {
     

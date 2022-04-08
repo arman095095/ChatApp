@@ -7,6 +7,7 @@
 //
 
 import SwiftDate
+import Foundation
 
 class DateFormatManager {
     

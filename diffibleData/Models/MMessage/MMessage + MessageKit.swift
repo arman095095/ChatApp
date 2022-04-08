@@ -7,6 +7,7 @@
 //
 
 import MessageKit
+import UIKit
 
 //MARK: MessageKit MessageType
 extension MMessage: MessageType {

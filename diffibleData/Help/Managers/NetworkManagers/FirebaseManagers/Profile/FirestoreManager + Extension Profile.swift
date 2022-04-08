@@ -7,6 +7,7 @@
 //
 
 import FirebaseFirestore
+import UIKit
 
 //MARK: Profile Settings
 extension FirestoreManager {

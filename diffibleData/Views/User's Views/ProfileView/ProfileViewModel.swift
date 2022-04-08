@@ -9,6 +9,7 @@
 import RxSwift
 import RxCocoa
 import RxRelay
+import Foundation
 
 class ProfileViewModel {
     

@@ -7,6 +7,7 @@
 //
 
 import MessageKit
+import Foundation
 
 struct MockPhotoMessage: MessageType, MockMessage {
     

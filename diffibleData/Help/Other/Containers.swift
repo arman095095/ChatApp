@@ -38,11 +38,9 @@ class AudioManagersContainer: AudioManagersContainerProtocol {
 class AuthManagersContainer: AuthManagersContainerProtocol {
     
     var authManager: FirebaseAuthManager
-    var googleAuthManager: GoogleAuthManager
     
-    required init(authManager: FirebaseAuthManager, googleAuthManager: GoogleAuthManager) {
+    required init(authManager: FirebaseAuthManager) {
         self.authManager = authManager
-        self.googleAuthManager = googleAuthManager
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import MessageKit
+import Foundation
 
 struct MockAudioMessage: MessageType, MockMessage {
     var sender: SenderType {

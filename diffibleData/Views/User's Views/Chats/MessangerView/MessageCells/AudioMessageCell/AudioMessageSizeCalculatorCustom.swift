@@ -7,6 +7,7 @@
 //
 
 import MessageKit
+import UIKit
 
 class AudioMessageSizeCalculatorCustom: AudioMessageSizeCalculator {
     func setup() {

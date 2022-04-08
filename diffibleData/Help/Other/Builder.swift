@@ -38,16 +38,14 @@ class Builder {
     }
     
     func mainAuthVC(authManager: FirebaseAuthManager) -> MainAuthViewConroller {
-        let googleAuthManager = GoogleAuthManager(authManager: authManager)
-        let authManagers = AuthManagersContainer(authManager: authManager, googleAuthManager: googleAuthManager)
+        let authManagers = AuthManagersContainer(authManager: authManager)
         let mainAuthViewModel = MainAuthViewModel(authManagers: authManagers)
         return MainAuthViewConroller(mainAuthViewModel: mainAuthViewModel)
     }
     
     func mainAuthVC() -> MainAuthViewConroller {
         let authManager = FirebaseAuthManager()
-        let googleAuthManager = GoogleAuthManager(authManager: authManager)
-        let authManagers = AuthManagersContainer(authManager: authManager, googleAuthManager: googleAuthManager)
+        let authManagers = AuthManagersContainer(authManager: authManager)
         let mainAuthViewModel = MainAuthViewModel(authManagers: authManagers)
         return MainAuthViewConroller(mainAuthViewModel: mainAuthViewModel)
     }

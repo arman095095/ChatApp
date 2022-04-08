@@ -6,6 +6,7 @@
 //  Copyright © 2020 Arman Davidoff. All rights reserved.
 //
 
+import Foundation
 import RxCocoa
 import RxSwift
 import RxRelay

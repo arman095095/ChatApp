@@ -19,7 +19,6 @@ class MainAuthViewConroller: UIViewController {
     private let googleLabel = UILabel(text: "Выполнить вход с помощью")
     private let emailLabel = UILabel(text: "Зарегистрироваться")
     private let loginLabel = UILabel(text: "Уже зарегистрировались?")
-    private let googleButton = LoadButton(title: "Google", backgroundColor: .white, titleColor: .black, shadow: true,google: true, height: 60, activityColor: .black)
     private let emailButton = UIButton(title: "E-mail", backgroundColor: .buttonDark(), titleColor: .white, height: 60)
     private let loginButton = UIButton(title: "Login", backgroundColor: .white, titleColor: .buttonRed(), shadow: true, height: 60)
     private let logo = UIImageView(image: UIImage(named: "logotip"))
@@ -45,11 +44,6 @@ class MainAuthViewConroller: UIViewController {
         setupViewModel()
     }
     
-    @objc private func googleTapped() {
-        googleButton.loading()
-        mainAuthViewModel.signInWithGoogle(present: self)
-    }
-    
     @objc private func emailTapped() {
         let signInVC = Builder.shared.signUpVC(delegate: self, authManagers: mainAuthViewModel.authManagers)
         present(signInVC, animated: true, completion: nil)
@@ -68,10 +62,9 @@ private extension MainAuthViewConroller {
         self.view.backgroundColor = .white
         logo.contentMode = .scaleAspectFit
         logo.translatesAutoresizingMaskIntoConstraints = false
-        let googleView = UIView(button: googleButton , label: googleLabel, spacing: 20)
         let emailView = UIView(button: emailButton , label: emailLabel, spacing: 20)
         let loginView = UIView(button: loginButton, label: loginLabel, spacing: 20)
-        let authStackView = UIStackView(arrangedSubviews: [logo,googleView,emailView,loginView],spacing: 40,axis: .vertical)
+        let authStackView = UIStackView(arrangedSubviews: [logo,emailView,loginView],spacing: 40,axis: .vertical)
         view.addSubview(authStackView)
         authStackView.topAnchor.constraint(greaterThanOrEqualTo: self.view.topAnchor,constant: 15).isActive = true
         authStackView.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor,constant: -15).isActive = true
@@ -84,7 +77,6 @@ private extension MainAuthViewConroller {
     func setupActions() {
         emailButton.addTarget(self, action: #selector(emailTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
-        googleButton.addTarget(self, action: #selector(googleTapped), for: .touchUpInside)
     }
 }
 
@@ -94,7 +86,6 @@ private extension MainAuthViewConroller {
     func setupViewModel() {
         mainAuthViewModel.successLoginHandler = { [weak self] muser in
             guard let self = self else { return }
-            self.googleButton.stop()
             Alert.present(type: .success, title: "Вы успешно авторизованы")
             let tabVC = Builder.shared.mainTabBarController(currentUser: muser)
             self.present(tabVC, animated: true, completion: nil)
@@ -102,7 +93,6 @@ private extension MainAuthViewConroller {
         
         mainAuthViewModel.successSignUpHandler = { [weak self] user in
             guard let self = self else { return }
-            self.googleButton.stop()
             Alert.present(type: .success, title: "Вы успешно зарегистрированы")
             let setupVC = Builder.shared.firstAddInfoVC(currentUser: user, authManager: self.mainAuthViewModel.authManagers.authManager)
             self.present(setupVC, animated: true, completion: nil)
@@ -115,9 +105,6 @@ private extension MainAuthViewConroller {
             } else {
                 Alert.present(type: .error,title: error.localizedDescription)
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.googleButton.stop()
-            }
         }
         
         mainAuthViewModel.removedUserHandler = { [weak self] user, error in
@@ -126,21 +113,17 @@ private extension MainAuthViewConroller {
                 self.mainAuthViewModel.recoverProfile(user: user)
             } complitionDeny: {
                 self.mainAuthViewModel.cancelRecover()
-                self.googleButton.stop()
             }
         }
         
         mainAuthViewModel.successRecoverHandler = { [weak self] user in
             guard let self = self else { return }
             Alert.present(type: .success, title: "Ваш профиль восстановлен")
-            self.googleButton.stop()
             let tabVC = Builder.shared.mainTabBarController(currentUser: user)
             self.present(tabVC, animated: true, completion: nil)
         }
         
         mainAuthViewModel.failureRecoverHandler = { [weak self] error in
-            guard let self = self else { return }
-            self.googleButton.stop()
             if let _ = error as? ConnectionError {
                 Alert.present(type: .connection)
             } else {

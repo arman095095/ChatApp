@@ -7,6 +7,7 @@
 //
 
 import SwiftEntryKit
+import UIKit
 
 class Alert {
     

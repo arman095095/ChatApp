@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import GoogleSignIn
 
 //MARK: Auth
 class FirebaseAuthManager {
@@ -22,7 +21,7 @@ class FirebaseAuthManager {
         return base
     }()
     
-    func register(email: String, password: String, handler: @escaping (Result<User,Error>) -> Void) {
+    func register(email: String, password: String, handler: @escaping (Result<User, Error>) -> Void) {
         if !InternetConnectionManager.isConnectedToNetwork() {
             handler(.failure(ConnectionError.noInternet))
             return
@@ -37,31 +36,7 @@ class FirebaseAuthManager {
         }
     }
     
-    func login(user:GIDGoogleUser!,error:Error!,complition: @escaping (Result<User,Error>) -> Void) {
-        if !InternetConnectionManager.isConnectedToNetwork() {
-            complition(.failure(ConnectionError.noInternet))
-            return
-        }
-        if let error = error {
-            complition(.failure(error))
-            return
-        }
-        guard let authentication = user?.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-        
-        Auth.auth().signIn(with: credential) { (result, error) in
-            if let error = error {
-                complition(.failure(error))
-                return
-            }
-            guard let user = result?.user else { return }
-            complition(.success(user))
-        }
-        
-    }
-    
-    func login(email:String,password:String,handler: @escaping (Result<User,Error>) -> Void) {
+    func login(email: String, password: String, handler: @escaping (Result<User, Error>) -> Void) {
         if !InternetConnectionManager.isConnectedToNetwork() {
             handler(.failure(ConnectionError.noInternet))
             return
@@ -95,7 +70,7 @@ extension FirebaseAuthManager {
         return db.collection("users")
     }
     
-    func createUserProfile(identifier: String, username: String, info: String, sex: String, country: String, city: String, birthday: String, userImage: UIImage, complition: @escaping (Result<MUser,Error>) -> Void) {
+    func createUserProfile(identifier: String, username: String, info: String, sex: String, country: String, city: String, birthday: String, userImage: UIImage, complition: @escaping (Result<MUser, Error>) -> Void) {
         if !InternetConnectionManager.isConnectedToNetwork() {
             complition(.failure(ConnectionError.noInternet))
             return
@@ -120,7 +95,7 @@ extension FirebaseAuthManager {
         }
     }
     
-    func getUserProfile(userID: String, complition: @escaping (Result<MUser,Error>) -> Void) {
+    func getUserProfile(userID: String, complition: @escaping (Result<MUser, Error>) -> Void) {
         if !InternetConnectionManager.isConnectedToNetwork() {
             complition(.failure(ConnectionError.noInternet))
         }
@@ -186,7 +161,7 @@ extension FirebaseAuthManager {
         }
     }
     
-    func recoverUserProfile(user: MUser,complition: @escaping (Result<MUser,Error>) -> Void) {
+    func recoverUserProfile(user: MUser, complition: @escaping (Result<MUser, Error>) -> Void) {
         if !InternetConnectionManager.isConnectedToNetwork() {
             complition(.failure(ConnectionError.noInternet))
             return

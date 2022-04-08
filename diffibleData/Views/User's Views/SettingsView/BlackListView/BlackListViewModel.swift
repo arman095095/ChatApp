@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxRelay
+import UIKit
 
 class BlackListViewModel {
     

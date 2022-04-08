@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
+import UIKit
 
 //MARK: Chats Extension (Send Data)
 extension FirestoreManager {
