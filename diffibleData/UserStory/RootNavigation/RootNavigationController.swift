@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol UnauthorizedNavigationViewInput: AnyObject {
+protocol RootNavigationViewInput: AnyObject {
     
 }
 
-final class UnauthorizedNavigationController: UINavigationController {
-    var output: UnauthorizedNavigationViewOutput?
+final class RootNavigationController: UINavigationController {
+    var output: RootNavigationViewOutput?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,6 @@ final class UnauthorizedNavigationController: UINavigationController {
     
 }
 
-extension UnauthorizedNavigationController: UnauthorizedNavigationViewInput {
+extension RootNavigationController: RootNavigationViewInput {
     
 }

@@ -11,14 +11,14 @@ import Module
 import Managers
 import Swinject
 
-typealias UnauthorizedNavigationModule = Module<UnauthorizedNavigationModuleInput, UnauthorizedNavigationModuleOutput>
+typealias RootNavigationModule = Module<RootNavigationModuleInput, RootNavigationModuleOutput>
 
-enum UnauthorizedNavigationAssembly {
-    static func makeModule(quickAccessManager: QuickAccessManagerProtocol, container: Container) -> UnauthorizedNavigationModule {
-        let view = UnauthorizedNavigationController()
-        let router = UnauthorizedNavigationRouter()
-        let interactor = UnauthorizedNavigationInteractor()
-        let presenter = UnauthorizedNavigationPresenter(router: router,
+enum RootNavigationAssembly {
+    static func makeModule(quickAccessManager: QuickAccessManagerProtocol, container: Container) -> RootNavigationModule {
+        let view = RootNavigationController()
+        let router = RootNavigationRouter()
+        let interactor = RootNavigationInteractor()
+        let presenter = RootNavigationPresenter(router: router,
                                                         interactor: interactor,
                                                         quickAccessManager: quickAccessManager,
                                                         container: container)
@@ -26,7 +26,7 @@ enum UnauthorizedNavigationAssembly {
         interactor.output = presenter
         presenter.view = view
         router.transitionHandler = view
-        return UnauthorizedNavigationModule(input: presenter, view: view) {
+        return RootNavigationModule(input: presenter, view: view) {
             presenter.output = $0
         }
     }

@@ -14,29 +14,29 @@ import Settings
 import Account
 import AuthorizedZone
 
-protocol UnauthorizedNavigationModuleOutput: AnyObject {
+protocol RootNavigationModuleOutput: AnyObject {
     
 }
 
-protocol UnauthorizedNavigationModuleInput: AnyObject {
+protocol RootNavigationModuleInput: AnyObject {
     
 }
 
-protocol UnauthorizedNavigationViewOutput: AnyObject {
+protocol RootNavigationViewOutput: AnyObject {
     func viewDidLoad()
 }
 
-final class UnauthorizedNavigationPresenter {
+final class RootNavigationPresenter {
     
-    weak var view: UnauthorizedNavigationViewInput?
-    weak var output: UnauthorizedNavigationModuleOutput?
-    private let router: UnauthorizedNavigationRouterInput
-    private let interactor: UnauthorizedNavigationInteractorInput
+    weak var view: RootNavigationViewInput?
+    weak var output: RootNavigationModuleOutput?
+    private let router: RootNavigationRouterInput
+    private let interactor: RootNavigationInteractorInput
     private let quickAccessManager: QuickAccessManagerProtocol
     private let container: Container
     
-    init(router: UnauthorizedNavigationRouterInput,
-         interactor: UnauthorizedNavigationInteractorInput,
+    init(router: RootNavigationRouterInput,
+         interactor: RootNavigationInteractorInput,
          quickAccessManager: QuickAccessManagerProtocol,
          container: Container) {
         self.router = router
@@ -46,7 +46,7 @@ final class UnauthorizedNavigationPresenter {
     }
 }
 
-extension UnauthorizedNavigationPresenter: UnauthorizedNavigationViewOutput {
+extension RootNavigationPresenter: RootNavigationViewOutput {
     func viewDidLoad() {
         guard let _ = quickAccessManager.userID,
               quickAccessManager.userRemembered else {
@@ -57,21 +57,21 @@ extension UnauthorizedNavigationPresenter: UnauthorizedNavigationViewOutput {
     }
 }
 
-extension UnauthorizedNavigationPresenter: UnauthorizedNavigationInteractorOutput {
+extension RootNavigationPresenter: RootNavigationInteractorOutput {
     
 }
 
-extension UnauthorizedNavigationPresenter: UnauthorizedNavigationModuleInput {
+extension RootNavigationPresenter: RootNavigationModuleInput {
     
 }
 
-extension UnauthorizedNavigationPresenter: AuthorizedZoneModuleOutput {
+extension RootNavigationPresenter: AuthorizedZoneModuleOutput {
     func openAuthorization() {
         router.openAuthorizationModule(output: self, container: container)
     }
 }
 
-extension UnauthorizedNavigationPresenter: AuthorizationModuleOutput {
+extension RootNavigationPresenter: AuthorizationModuleOutput {
 
     func userRegistered() {
         router.openAccountCreationModule(output: self, container: container)
@@ -86,6 +86,6 @@ extension UnauthorizedNavigationPresenter: AuthorizationModuleOutput {
     }
 }
 
-extension UnauthorizedNavigationPresenter: AccountModuleOutput {
+extension RootNavigationPresenter: AccountModuleOutput {
     
 }

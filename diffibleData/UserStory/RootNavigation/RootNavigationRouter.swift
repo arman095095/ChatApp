@@ -13,18 +13,18 @@ import Swinject
 import Settings
 import Account
 
-protocol UnauthorizedNavigationRouterInput: AnyObject {
+protocol RootNavigationRouterInput: AnyObject {
     func openAuthorizationModule(output: AuthorizationModuleOutput, container: Container)
     func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container)
     func openAccountCreationModule(output: AccountModuleOutput, container: Container)
     func openAccountEditModule(output: AccountModuleOutput, container: Container)
 }
 
-final class UnauthorizedNavigationRouter {
+final class RootNavigationRouter {
     weak var transitionHandler: UINavigationController?
 }
 
-extension UnauthorizedNavigationRouter: UnauthorizedNavigationRouterInput {
+extension RootNavigationRouter: RootNavigationRouterInput {
     func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container) {
         let module = AuthorizedZoneUserStory(container: container).rootModule()
         module.output = output

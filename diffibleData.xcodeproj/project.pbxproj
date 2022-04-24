@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8F05872628121C85005680CE /* LaunchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F05872528121C85005680CE /* LaunchAssembly.swift */; };
-		8F0D3A832808FA8C0097D644 /* ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A792808FA8C0097D644 /* ru.json */; };
-		8F0D3A842808FA8C0097D644 /* by.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A7A2808FA8C0097D644 /* by.json */; };
-		8F0D3A852808FA8C0097D644 /* tjk.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A7B2808FA8C0097D644 /* tjk.json */; };
-		8F0D3A862808FA8C0097D644 /* uzb.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A7C2808FA8C0097D644 /* uzb.json */; };
-		8F0D3A872808FA8C0097D644 /* uk.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A7D2808FA8C0097D644 /* uk.json */; };
-		8F0D3A882808FA8C0097D644 /* md.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A7E2808FA8C0097D644 /* md.json */; };
-		8F0D3A892808FA8C0097D644 /* kz.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A7F2808FA8C0097D644 /* kz.json */; };
-		8F0D3A8A2808FA8C0097D644 /* am.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A802808FA8C0097D644 /* am.json */; };
-		8F0D3A8B2808FA8C0097D644 /* az.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A812808FA8C0097D644 /* az.json */; };
-		8F0D3A8C2808FA8C0097D644 /* kgz.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0D3A822808FA8C0097D644 /* kgz.json */; };
-		8F5C9AC7281301BF007B9337 /* UnauthorizedNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC2281301BF007B9337 /* UnauthorizedNavigationPresenter.swift */; };
-		8F5C9AC8281301BF007B9337 /* UnauthorizedNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC3281301BF007B9337 /* UnauthorizedNavigationRouter.swift */; };
-		8F5C9AC9281301BF007B9337 /* UnauthorizedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC4281301BF007B9337 /* UnauthorizedNavigationController.swift */; };
-		8F5C9ACA281301BF007B9337 /* UnauthorizedNavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC5281301BF007B9337 /* UnauthorizedNavigationAssembly.swift */; };
-		8F5C9ACB281301BF007B9337 /* UnauthorizedNavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC6281301BF007B9337 /* UnauthorizedNavigationInteractor.swift */; };
+		8F5C9AC7281301BF007B9337 /* RootNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC2281301BF007B9337 /* RootNavigationPresenter.swift */; };
+		8F5C9AC8281301BF007B9337 /* RootNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC3281301BF007B9337 /* RootNavigationRouter.swift */; };
+		8F5C9AC9281301BF007B9337 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC4281301BF007B9337 /* RootNavigationController.swift */; };
+		8F5C9ACA281301BF007B9337 /* RootNavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC5281301BF007B9337 /* RootNavigationAssembly.swift */; };
+		8F5C9ACB281301BF007B9337 /* RootNavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC6281301BF007B9337 /* RootNavigationInteractor.swift */; };
 		8F5C9ACD28130796007B9337 /* UserStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9ACC28130796007B9337 /* UserStory.swift */; };
+		8F99F4842815FCAB0005D75D /* tjk.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F47A2815FCAA0005D75D /* tjk.json */; };
+		8F99F4852815FCAB0005D75D /* ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F47B2815FCAA0005D75D /* ru.json */; };
+		8F99F4862815FCAB0005D75D /* uk.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F47C2815FCAA0005D75D /* uk.json */; };
+		8F99F4872815FCAB0005D75D /* az.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F47D2815FCAA0005D75D /* az.json */; };
+		8F99F4882815FCAB0005D75D /* uzb.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F47E2815FCAA0005D75D /* uzb.json */; };
+		8F99F4892815FCAB0005D75D /* am.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F47F2815FCAA0005D75D /* am.json */; };
+		8F99F48A2815FCAB0005D75D /* kz.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F4802815FCAA0005D75D /* kz.json */; };
+		8F99F48B2815FCAB0005D75D /* kgz.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F4812815FCAA0005D75D /* kgz.json */; };
+		8F99F48C2815FCAB0005D75D /* by.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F4822815FCAA0005D75D /* by.json */; };
+		8F99F48D2815FCAB0005D75D /* md.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F99F4832815FCAA0005D75D /* md.json */; };
+		8F9F2A662815EB0B0033D125 /* Managers in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A652815EB0B0033D125 /* Managers */; };
+		8F9F2A692815EB3E0033D125 /* Authorization in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A682815EB3E0033D125 /* Authorization */; };
+		8F9F2A6C2815EB5A0033D125 /* Account in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A6B2815EB5A0033D125 /* Account */; };
+		8F9F2A6F2815EB7F0033D125 /* AuthorizedZone in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A6E2815EB7F0033D125 /* AuthorizedZone */; };
 		EE56EB33240531A4000D8ABC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */; };
 		EE87BB622407D7A00016C4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE87BB612407D7A00016C4BE /* Assets.xcassets */; };
 		EEF2FEF223FD9CF400E67F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2FEF123FD9CF400E67F56 /* AppDelegate.swift */; };
@@ -34,22 +38,22 @@
 
 /* Begin PBXFileReference section */
 		8F05872528121C85005680CE /* LaunchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAssembly.swift; sourceTree = "<group>"; };
-		8F0D3A792808FA8C0097D644 /* ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ru.json; sourceTree = "<group>"; };
-		8F0D3A7A2808FA8C0097D644 /* by.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = by.json; sourceTree = "<group>"; };
-		8F0D3A7B2808FA8C0097D644 /* tjk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tjk.json; sourceTree = "<group>"; };
-		8F0D3A7C2808FA8C0097D644 /* uzb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uzb.json; sourceTree = "<group>"; };
-		8F0D3A7D2808FA8C0097D644 /* uk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uk.json; sourceTree = "<group>"; };
-		8F0D3A7E2808FA8C0097D644 /* md.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = md.json; sourceTree = "<group>"; };
-		8F0D3A7F2808FA8C0097D644 /* kz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz.json; sourceTree = "<group>"; };
-		8F0D3A802808FA8C0097D644 /* am.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = am.json; sourceTree = "<group>"; };
-		8F0D3A812808FA8C0097D644 /* az.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = az.json; sourceTree = "<group>"; };
-		8F0D3A822808FA8C0097D644 /* kgz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kgz.json; sourceTree = "<group>"; };
-		8F5C9AC2281301BF007B9337 /* UnauthorizedNavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedNavigationPresenter.swift; sourceTree = "<group>"; };
-		8F5C9AC3281301BF007B9337 /* UnauthorizedNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedNavigationRouter.swift; sourceTree = "<group>"; };
-		8F5C9AC4281301BF007B9337 /* UnauthorizedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedNavigationController.swift; sourceTree = "<group>"; };
-		8F5C9AC5281301BF007B9337 /* UnauthorizedNavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedNavigationAssembly.swift; sourceTree = "<group>"; };
-		8F5C9AC6281301BF007B9337 /* UnauthorizedNavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedNavigationInteractor.swift; sourceTree = "<group>"; };
+		8F5C9AC2281301BF007B9337 /* RootNavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationPresenter.swift; sourceTree = "<group>"; };
+		8F5C9AC3281301BF007B9337 /* RootNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationRouter.swift; sourceTree = "<group>"; };
+		8F5C9AC4281301BF007B9337 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		8F5C9AC5281301BF007B9337 /* RootNavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationAssembly.swift; sourceTree = "<group>"; };
+		8F5C9AC6281301BF007B9337 /* RootNavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationInteractor.swift; sourceTree = "<group>"; };
 		8F5C9ACC28130796007B9337 /* UserStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStory.swift; sourceTree = "<group>"; };
+		8F99F47A2815FCAA0005D75D /* tjk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tjk.json; sourceTree = "<group>"; };
+		8F99F47B2815FCAA0005D75D /* ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ru.json; sourceTree = "<group>"; };
+		8F99F47C2815FCAA0005D75D /* uk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uk.json; sourceTree = "<group>"; };
+		8F99F47D2815FCAA0005D75D /* az.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = az.json; sourceTree = "<group>"; };
+		8F99F47E2815FCAA0005D75D /* uzb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uzb.json; sourceTree = "<group>"; };
+		8F99F47F2815FCAA0005D75D /* am.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = am.json; sourceTree = "<group>"; };
+		8F99F4802815FCAA0005D75D /* kz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kz.json; sourceTree = "<group>"; };
+		8F99F4812815FCAA0005D75D /* kgz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kgz.json; sourceTree = "<group>"; };
+		8F99F4822815FCAA0005D75D /* by.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = by.json; sourceTree = "<group>"; };
+		8F99F4832815FCAA0005D75D /* md.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = md.json; sourceTree = "<group>"; };
 		EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE87BB612407D7A00016C4BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,29 +69,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9F2A6C2815EB5A0033D125 /* Account in Frameworks */,
+				8F9F2A6F2815EB7F0033D125 /* AuthorizedZone in Frameworks */,
+				8F9F2A692815EB3E0033D125 /* Authorization in Frameworks */,
+				8F9F2A662815EB0B0033D125 /* Managers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F0D3A782808FA770097D644 /* asset */ = {
-			isa = PBXGroup;
-			children = (
-				8F0D3A802808FA8C0097D644 /* am.json */,
-				8F0D3A812808FA8C0097D644 /* az.json */,
-				8F0D3A7A2808FA8C0097D644 /* by.json */,
-				8F0D3A822808FA8C0097D644 /* kgz.json */,
-				8F0D3A7F2808FA8C0097D644 /* kz.json */,
-				8F0D3A7E2808FA8C0097D644 /* md.json */,
-				8F0D3A792808FA8C0097D644 /* ru.json */,
-				8F0D3A7B2808FA8C0097D644 /* tjk.json */,
-				8F0D3A7D2808FA8C0097D644 /* uk.json */,
-				8F0D3A7C2808FA8C0097D644 /* uzb.json */,
-			);
-			path = asset;
-			sourceTree = "<group>";
-		};
 		8F43D77028021BA70010E9DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +89,11 @@
 		8F5C9AC128130183007B9337 /* RootNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				8F5C9AC2281301BF007B9337 /* UnauthorizedNavigationPresenter.swift */,
-				8F5C9AC3281301BF007B9337 /* UnauthorizedNavigationRouter.swift */,
-				8F5C9AC4281301BF007B9337 /* UnauthorizedNavigationController.swift */,
-				8F5C9AC5281301BF007B9337 /* UnauthorizedNavigationAssembly.swift */,
-				8F5C9AC6281301BF007B9337 /* UnauthorizedNavigationInteractor.swift */,
+				8F5C9AC2281301BF007B9337 /* RootNavigationPresenter.swift */,
+				8F5C9AC3281301BF007B9337 /* RootNavigationRouter.swift */,
+				8F5C9AC4281301BF007B9337 /* RootNavigationController.swift */,
+				8F5C9AC5281301BF007B9337 /* RootNavigationAssembly.swift */,
+				8F5C9AC6281301BF007B9337 /* RootNavigationInteractor.swift */,
 			);
 			path = RootNavigation;
 			sourceTree = "<group>";
@@ -122,6 +113,23 @@
 				8F05872528121C85005680CE /* LaunchAssembly.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		8F99F4792815FCAA0005D75D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8F99F47A2815FCAA0005D75D /* tjk.json */,
+				8F99F47B2815FCAA0005D75D /* ru.json */,
+				8F99F47C2815FCAA0005D75D /* uk.json */,
+				8F99F47D2815FCAA0005D75D /* az.json */,
+				8F99F47E2815FCAA0005D75D /* uzb.json */,
+				8F99F47F2815FCAA0005D75D /* am.json */,
+				8F99F4802815FCAA0005D75D /* kz.json */,
+				8F99F4812815FCAA0005D75D /* kgz.json */,
+				8F99F4822815FCAA0005D75D /* by.json */,
+				8F99F4832815FCAA0005D75D /* md.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		EE4EB66D256097790042FF46 /* Supporting Files */ = {
@@ -153,10 +161,10 @@
 		EEF2FEF023FD9CF400E67F56 /* diffibleData */ = {
 			isa = PBXGroup;
 			children = (
+				8F99F4792815FCAA0005D75D /* Assets */,
 				8F5C9ACF281312FF007B9337 /* Launch */,
 				8F5C9ACE28130D03007B9337 /* UserStory */,
 				EE4EB66D256097790042FF46 /* Supporting Files */,
-				8F0D3A782808FA770097D644 /* asset */,
 				EEF2FEFF23FD9CF500E67F56 /* LaunchScreen.storyboard */,
 				EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */,
 				EE87BB612407D7A00016C4BE /* Assets.xcassets */,
@@ -191,6 +199,10 @@
 			);
 			name = diffibleData;
 			packageProductDependencies = (
+				8F9F2A652815EB0B0033D125 /* Managers */,
+				8F9F2A682815EB3E0033D125 /* Authorization */,
+				8F9F2A6B2815EB5A0033D125 /* Account */,
+				8F9F2A6E2815EB7F0033D125 /* AuthorizedZone */,
 			);
 			productName = diffibleData;
 			productReference = EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */;
@@ -221,6 +233,10 @@
 			);
 			mainGroup = EEF2FEE523FD9CF400E67F56;
 			packageReferences = (
+				8F9F2A642815EB0B0033D125 /* XCRemoteSwiftPackageReference "Managers" */,
+				8F9F2A672815EB3E0033D125 /* XCRemoteSwiftPackageReference "Authorization" */,
+				8F9F2A6A2815EB5A0033D125 /* XCRemoteSwiftPackageReference "Account" */,
+				8F9F2A6D2815EB7F0033D125 /* XCRemoteSwiftPackageReference "AuthorizedZone" */,
 			);
 			productRefGroup = EEF2FEEF23FD9CF400E67F56 /* Products */;
 			projectDirPath = "";
@@ -236,20 +252,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F0D3A842808FA8C0097D644 /* by.json in Resources */,
-				8F0D3A862808FA8C0097D644 /* uzb.json in Resources */,
-				8F0D3A8C2808FA8C0097D644 /* kgz.json in Resources */,
-				8F0D3A852808FA8C0097D644 /* tjk.json in Resources */,
-				8F0D3A872808FA8C0097D644 /* uk.json in Resources */,
+				8F99F4852815FCAB0005D75D /* ru.json in Resources */,
+				8F99F48C2815FCAB0005D75D /* by.json in Resources */,
 				EEF2FF0123FD9CF500E67F56 /* LaunchScreen.storyboard in Resources */,
-				8F0D3A892808FA8C0097D644 /* kz.json in Resources */,
+				8F99F4882815FCAB0005D75D /* uzb.json in Resources */,
+				8F99F4892815FCAB0005D75D /* am.json in Resources */,
+				8F99F4872815FCAB0005D75D /* az.json in Resources */,
+				8F99F48A2815FCAB0005D75D /* kz.json in Resources */,
 				EE87BB622407D7A00016C4BE /* Assets.xcassets in Resources */,
 				EEF2FEFE23FD9CF500E67F56 /* Preview Assets.xcassets in Resources */,
+				8F99F48B2815FCAB0005D75D /* kgz.json in Resources */,
+				8F99F48D2815FCAB0005D75D /* md.json in Resources */,
+				8F99F4842815FCAB0005D75D /* tjk.json in Resources */,
 				EE56EB33240531A4000D8ABC /* GoogleService-Info.plist in Resources */,
-				8F0D3A8A2808FA8C0097D644 /* am.json in Resources */,
-				8F0D3A882808FA8C0097D644 /* md.json in Resources */,
-				8F0D3A8B2808FA8C0097D644 /* az.json in Resources */,
-				8F0D3A832808FA8C0097D644 /* ru.json in Resources */,
+				8F99F4862815FCAB0005D75D /* uk.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,13 +277,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F05872628121C85005680CE /* LaunchAssembly.swift in Sources */,
-				8F5C9ACA281301BF007B9337 /* UnauthorizedNavigationAssembly.swift in Sources */,
-				8F5C9ACB281301BF007B9337 /* UnauthorizedNavigationInteractor.swift in Sources */,
+				8F5C9ACA281301BF007B9337 /* RootNavigationAssembly.swift in Sources */,
+				8F5C9ACB281301BF007B9337 /* RootNavigationInteractor.swift in Sources */,
 				EEF2FEF223FD9CF400E67F56 /* AppDelegate.swift in Sources */,
-				8F5C9AC9281301BF007B9337 /* UnauthorizedNavigationController.swift in Sources */,
-				8F5C9AC8281301BF007B9337 /* UnauthorizedNavigationRouter.swift in Sources */,
+				8F5C9AC9281301BF007B9337 /* RootNavigationController.swift in Sources */,
+				8F5C9AC8281301BF007B9337 /* RootNavigationRouter.swift in Sources */,
 				EEF2FEF423FD9CF400E67F56 /* SceneDelegate.swift in Sources */,
-				8F5C9AC7281301BF007B9337 /* UnauthorizedNavigationPresenter.swift in Sources */,
+				8F5C9AC7281301BF007B9337 /* RootNavigationPresenter.swift in Sources */,
 				8F5C9ACD28130796007B9337 /* UserStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +482,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F9F2A642815EB0B0033D125 /* XCRemoteSwiftPackageReference "Managers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arman095095/Managers.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		8F9F2A672815EB3E0033D125 /* XCRemoteSwiftPackageReference "Authorization" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arman095095/Authorization.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		8F9F2A6A2815EB5A0033D125 /* XCRemoteSwiftPackageReference "Account" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arman095095/Account.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		8F9F2A6D2815EB7F0033D125 /* XCRemoteSwiftPackageReference "AuthorizedZone" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arman095095/AuthorizedZone.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F9F2A652815EB0B0033D125 /* Managers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9F2A642815EB0B0033D125 /* XCRemoteSwiftPackageReference "Managers" */;
+			productName = Managers;
+		};
+		8F9F2A682815EB3E0033D125 /* Authorization */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9F2A672815EB3E0033D125 /* XCRemoteSwiftPackageReference "Authorization" */;
+			productName = Authorization;
+		};
+		8F9F2A6B2815EB5A0033D125 /* Account */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9F2A6A2815EB5A0033D125 /* XCRemoteSwiftPackageReference "Account" */;
+			productName = Account;
+		};
+		8F9F2A6E2815EB7F0033D125 /* AuthorizedZone */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F9F2A6D2815EB7F0033D125 /* XCRemoteSwiftPackageReference "AuthorizedZone" */;
+			productName = AuthorizedZone;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEF2FEE623FD9CF400E67F56 /* Project object */;
 }
