@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import SwiftUI
-import RealmSwift
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -16,22 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 15, migrationBlock: { migration, oldSchemaVersion in
-            if (oldSchemaVersion < 1) { }
-        })
-        self.window = Builder.shared.mainWindow(scene: windowScene)
-    }
-    
-    func sceneDidDisconnect(_ scene: UIScene) {
-        FirebaseAuthManager.setOffline()
-    }
-    
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        FirebaseAuthManager.setOffline()
-    }
-    
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        FirebaseAuthManager.setOnline()
+        self.window = UIWindow(windowScene: windowScene)
+        let container = Container()
+        ApplicationAssembly.assemble(container: container)
+        let launchModule = LaunchUserStory(container: container).rootModule()
+        window?.rootViewController = launchModule.view
+        window?.makeKeyAndVisible()
     }
 }
-
