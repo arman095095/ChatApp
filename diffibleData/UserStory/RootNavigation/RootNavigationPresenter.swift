@@ -13,6 +13,7 @@ import Authorization
 import Settings
 import Account
 import AuthorizedZone
+import Profile
 
 protocol RootNavigationModuleOutput: AnyObject {
     
@@ -66,8 +67,34 @@ extension RootNavigationPresenter: RootNavigationModuleInput {
 }
 
 extension RootNavigationPresenter: AuthorizedZoneModuleOutput {
+    func openAccountsSettings() {
+        router.openAccountsSettingsModule(output: self, container: container)
+    }
+    
     func openAuthorization() {
         router.openAuthorizationModule(output: self, container: container)
+    }
+}
+
+extension RootNavigationPresenter: SettingsModuleOutput {
+    func openUnauthorizedZone() {
+        router.openAuthorizationModule(output: self, container: container)
+    }
+    
+    func openEditAccount() {
+        router.openAccountEditModule(output: self, container: container)
+    }
+    
+    func openProfileModule(profile: ProfileModelProtocol) {
+        router.openProfileModule(profile: profile,
+                                 container: container,
+                                 output: self)
+    }
+}
+
+extension RootNavigationPresenter: ProfileModuleOutput {
+    func openAccountSettingsModule() {
+        router.openAccountsSettingsModule(output: self, container: container)
     }
 }
 

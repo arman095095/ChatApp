@@ -12,12 +12,16 @@ import AuthorizedZone
 import Swinject
 import Settings
 import Account
+import Managers
+import Profile
 
 protocol RootNavigationRouterInput: AnyObject {
     func openAuthorizationModule(output: AuthorizationModuleOutput, container: Container)
     func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container)
     func openAccountCreationModule(output: AccountModuleOutput, container: Container)
     func openAccountEditModule(output: AccountModuleOutput, container: Container)
+    func openAccountsSettingsModule(output: SettingsModuleOutput, container: Container)
+    func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput)
 }
 
 final class RootNavigationRouter {
@@ -25,6 +29,13 @@ final class RootNavigationRouter {
 }
 
 extension RootNavigationRouter: RootNavigationRouterInput {
+
+    func openAccountsSettingsModule(output: SettingsModuleOutput, container: Container) {
+        let module = SettingsUserStory(container: container).rootModule()
+        module.output = output
+        transitionHandler?.pushViewController(module.view, animated: true)
+    }
+    
     func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container) {
         let module = AuthorizedZoneUserStory(container: container).rootModule()
         module.output = output
@@ -45,6 +56,12 @@ extension RootNavigationRouter: RootNavigationRouterInput {
     
     func openAccountEditModule(output: AccountModuleOutput, container: Container) {
         let module = AccountUserStory(container: container).editAccountModule()
+        module.output = output
+        transitionHandler?.pushViewController(module.view, animated: true)
+    }
+    
+    func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput) {
+        let module = ProfileUserStory(container: container).friendAccountModule(profile: profile)
         module.output = output
         transitionHandler?.pushViewController(module.view, animated: true)
     }
