@@ -11,7 +11,7 @@ import Module
 import Managers
 import Swinject
 
-typealias RootNavigationModule = Module<RootNavigationModuleInput, RootNavigationModuleOutput>
+public typealias RootNavigationModule = Module<RootNavigationModuleInput, RootNavigationModuleOutput>
 
 enum RootNavigationAssembly {
     static func makeModule(quickAccessManager: QuickAccessManagerProtocol, container: Container) -> RootNavigationModule {

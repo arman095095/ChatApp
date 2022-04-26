@@ -22,6 +22,8 @@ import AuthorizedZone
 final class ApplicationAssembly {
     static func assemble(container: Container) {
         QuickAccessManagerAssembly.assemble(container: container)
+        CoreDataServiceAssembly.assemble(container: container)
+        AccountCacheServiceAssembly.assemble(container: container)
         AlertManagerAssembly.assemble(container: container)
         NetworkServicesAssembly.assemble(container: container)
         AuthManagerAssembly.assemble(container: container)

@@ -15,11 +15,11 @@ import Account
 import AuthorizedZone
 import Profile
 
-protocol RootNavigationModuleOutput: AnyObject {
+public protocol RootNavigationModuleOutput: AnyObject {
     
 }
 
-protocol RootNavigationModuleInput: AnyObject {
+public protocol RootNavigationModuleInput: AnyObject {
     
 }
 
@@ -49,8 +49,13 @@ final class RootNavigationPresenter {
 
 extension RootNavigationPresenter: RootNavigationViewOutput {
     func viewDidLoad() {
-        guard let _ = quickAccessManager.userID,
-              quickAccessManager.userRemembered else {
+        configure()
+    }
+}
+
+private extension RootNavigationPresenter {
+    func configure() {
+        guard let _ = quickAccessManager.userID else {
             router.openAuthorizationModule(output: self, container: container)
             return
         }
@@ -66,53 +71,15 @@ extension RootNavigationPresenter: RootNavigationModuleInput {
     
 }
 
-extension RootNavigationPresenter: AuthorizedZoneModuleOutput {
-    func openAccountsSettings() {
-        router.openAccountsSettingsModule(output: self, container: container)
-    }
-    
-    func openAuthorization() {
-        router.openAuthorizationModule(output: self, container: container)
-    }
-}
-
-extension RootNavigationPresenter: SettingsModuleOutput {
-    func openUnauthorizedZone() {
-        router.openAuthorizationModule(output: self, container: container)
-    }
-    
-    func openEditAccount() {
-        router.openAccountEditModule(output: self, container: container)
-    }
-    
-    func openProfileModule(profile: ProfileModelProtocol) {
-        router.openProfileModule(profile: profile,
-                                 container: container,
-                                 output: self)
-    }
-}
-
-extension RootNavigationPresenter: ProfileModuleOutput {
-    func openAccountSettingsModule() {
-        router.openAccountsSettingsModule(output: self, container: container)
-    }
-}
-
 extension RootNavigationPresenter: AuthorizationModuleOutput {
-
-    func userRegistered() {
-        router.openAccountCreationModule(output: self, container: container)
-    }
-    
     func userAuthorized() {
         router.openAuthorizedZone(output: self, container: container)
     }
-    
-    func userNotExist() {
-        router.openAccountCreationModule(output: self, container: container)
-    }
 }
 
-extension RootNavigationPresenter: AccountModuleOutput {
-    
+
+extension RootNavigationPresenter: AuthorizedZoneModuleOutput {
+    func openAuthorization() {
+        router.openAuthorizationModule(output: self, container: container)
+    }
 }

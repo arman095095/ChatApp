@@ -12,7 +12,7 @@ import Swinject
 import Managers
 
 public protocol LaunchRouteMap: AnyObject {
-    func rootModule() -> ModuleProtocol
+    func rootModule() -> RootNavigationModule
 }
 
 public final class LaunchUserStory {
@@ -23,7 +23,7 @@ public final class LaunchUserStory {
 }
 
 extension LaunchUserStory: LaunchRouteMap {
-    public func rootModule() -> ModuleProtocol {
+    public func rootModule() -> RootNavigationModule {
         guard let quickAccessManager = container.synchronize().resolve(QuickAccessManagerProtocol.self) else { fatalError(ErrorMessage.dependency.localizedDescription) }
         let module = RootNavigationAssembly.makeModule(quickAccessManager: quickAccessManager, container: container)
         return module
