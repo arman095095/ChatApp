@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         self.window = UIWindow(windowScene: windowScene)
         let container = Container()
-        ApplicationAssembly.assemble(container: container)
+        ApplicationAssembly.generalAssemble(container: container)
         let launchModule = LaunchUserStory(container: container).rootModule()
         window?.rootViewController = launchModule.view
         window?.makeKeyAndVisible()

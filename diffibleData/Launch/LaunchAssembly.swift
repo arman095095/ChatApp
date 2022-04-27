@@ -20,15 +20,18 @@ import Account
 import AuthorizedZone
 
 final class ApplicationAssembly {
-    static func assemble(container: Container) {
+
+    static func generalAssemble(container: Container) {
         QuickAccessManagerAssembly.assemble(container: container)
-        CoreDataServiceAssembly.assemble(container: container)
-        AccountCacheServiceAssembly.assemble(container: container)
         AlertManagerAssembly.assemble(container: container)
         NetworkServicesAssembly.assemble(container: container)
-        AuthManagerAssembly.assemble(container: container)
+    }
+    
+    static func assembleUnauthorizedZone(container: Container) {
         AuthorizationUserStoryAssembly.assemble(container: container)
-        AccountUserStoryAssembly.assemble(container: container)
-        AuthorizedZoneUserStoryAssembly.assemble(container: container)
+    }
+    
+    static func assembleAuthorizedZone(container: Container, context: AccountManagerContext) {
+        AuthorizedZoneUserStoryAssembly.assemble(container: container, context: context)
     }
 }

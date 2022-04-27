@@ -25,7 +25,8 @@ public final class LaunchUserStory {
 extension LaunchUserStory: LaunchRouteMap {
     public func rootModule() -> RootNavigationModule {
         guard let quickAccessManager = container.synchronize().resolve(QuickAccessManagerProtocol.self) else { fatalError(ErrorMessage.dependency.localizedDescription) }
-        let module = RootNavigationAssembly.makeModule(quickAccessManager: quickAccessManager, container: container)
+        let module = RootNavigationAssembly.makeModule(quickAccessManager: quickAccessManager,
+                                                       container: container)
         return module
     }
 }

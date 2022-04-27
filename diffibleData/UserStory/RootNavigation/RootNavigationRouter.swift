@@ -20,7 +20,6 @@ protocol RootNavigationRouterInput: AnyObject {
     func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container)
     func openAccountCreationModule(output: AccountModuleOutput, container: Container)
     func openAccountEditModule(output: AccountModuleOutput, container: Container)
-    func openAccountsSettingsModule(output: SettingsModuleOutput, container: Container)
     func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput)
 }
 
@@ -29,12 +28,6 @@ final class RootNavigationRouter {
 }
 
 extension RootNavigationRouter: RootNavigationRouterInput {
-
-    func openAccountsSettingsModule(output: SettingsModuleOutput, container: Container) {
-        let module = SettingsUserStory(container: container).rootModule()
-        module.output = output
-        transitionHandler?.pushViewController(module.view, animated: true)
-    }
     
     func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container) {
         let module = AuthorizedZoneUserStory(container: container).rootModule()

@@ -55,10 +55,13 @@ extension RootNavigationPresenter: RootNavigationViewOutput {
 
 private extension RootNavigationPresenter {
     func configure() {
-        guard let _ = quickAccessManager.userID else {
+        guard let accountID = quickAccessManager.userID else {
+            AuthorizationUserStoryAssembly.assemble(container: container)
             router.openAuthorizationModule(output: self, container: container)
             return
         }
+        AuthorizedZoneUserStoryAssembly.assemble(container: container,
+                                                 context: .afterLaunch(accountID: accountID))
         router.openAuthorizedZone(output: self, container: container)
     }
 }
@@ -72,7 +75,10 @@ extension RootNavigationPresenter: RootNavigationModuleInput {
 }
 
 extension RootNavigationPresenter: AuthorizationModuleOutput {
-    func userAuthorized() {
+    func userAuthorized(userID: String, account: AccountModelProtocol) {
+        AuthorizedZoneUserStoryAssembly.assemble(container: container,
+                                                 context: .afterAuthorization(accountID: userID,
+                                                                              account: account))
         router.openAuthorizedZone(output: self, container: container)
     }
 }
