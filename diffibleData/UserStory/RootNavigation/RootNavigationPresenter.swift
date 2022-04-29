@@ -86,6 +86,7 @@ extension RootNavigationPresenter: AuthorizationModuleOutput {
 
 extension RootNavigationPresenter: AuthorizedZoneModuleOutput {
     func openAuthorization() {
+        AuthorizationUserStoryAssembly.assemble(container: container)
         router.openAuthorizationModule(output: self, container: container)
     }
 }
