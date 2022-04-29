@@ -8,6 +8,7 @@
 
 import UIKit
 import Swinject
+import Root
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     

@@ -7,17 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F05872628121C85005680CE /* LaunchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F05872528121C85005680CE /* LaunchAssembly.swift */; };
-		8F5C9AC7281301BF007B9337 /* RootNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC2281301BF007B9337 /* RootNavigationPresenter.swift */; };
-		8F5C9AC8281301BF007B9337 /* RootNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC3281301BF007B9337 /* RootNavigationRouter.swift */; };
-		8F5C9AC9281301BF007B9337 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC4281301BF007B9337 /* RootNavigationController.swift */; };
-		8F5C9ACA281301BF007B9337 /* RootNavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC5281301BF007B9337 /* RootNavigationAssembly.swift */; };
-		8F5C9ACB281301BF007B9337 /* RootNavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9AC6281301BF007B9337 /* RootNavigationInteractor.swift */; };
-		8F5C9ACD28130796007B9337 /* UserStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C9ACC28130796007B9337 /* UserStory.swift */; };
-		8F9F2A662815EB0B0033D125 /* Managers in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A652815EB0B0033D125 /* Managers */; };
-		8F9F2A692815EB3E0033D125 /* Authorization in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A682815EB3E0033D125 /* Authorization */; };
-		8F9F2A6C2815EB5A0033D125 /* Account in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A6B2815EB5A0033D125 /* Account */; };
-		8F9F2A6F2815EB7F0033D125 /* AuthorizedZone in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9F2A6E2815EB7F0033D125 /* AuthorizedZone */; };
+		8FB8E3A2281C55DB0074E312 /* Root in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB8E3A1281C55DB0074E312 /* Root */; };
 		EE56EB33240531A4000D8ABC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */; };
 		EE87BB622407D7A00016C4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE87BB612407D7A00016C4BE /* Assets.xcassets */; };
 		EEF2FEF223FD9CF400E67F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2FEF123FD9CF400E67F56 /* AppDelegate.swift */; };
@@ -27,13 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F05872528121C85005680CE /* LaunchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAssembly.swift; sourceTree = "<group>"; };
-		8F5C9AC2281301BF007B9337 /* RootNavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationPresenter.swift; sourceTree = "<group>"; };
-		8F5C9AC3281301BF007B9337 /* RootNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationRouter.swift; sourceTree = "<group>"; };
-		8F5C9AC4281301BF007B9337 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
-		8F5C9AC5281301BF007B9337 /* RootNavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationAssembly.swift; sourceTree = "<group>"; };
-		8F5C9AC6281301BF007B9337 /* RootNavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationInteractor.swift; sourceTree = "<group>"; };
-		8F5C9ACC28130796007B9337 /* UserStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStory.swift; sourceTree = "<group>"; };
 		EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE87BB612407D7A00016C4BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,10 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F9F2A6C2815EB5A0033D125 /* Account in Frameworks */,
-				8F9F2A6F2815EB7F0033D125 /* AuthorizedZone in Frameworks */,
-				8F9F2A692815EB3E0033D125 /* Authorization in Frameworks */,
-				8F9F2A662815EB0B0033D125 /* Managers in Frameworks */,
+				8FB8E3A2281C55DB0074E312 /* Root in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,35 +44,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8F5C9AC128130183007B9337 /* RootNavigation */ = {
-			isa = PBXGroup;
-			children = (
-				8F5C9AC2281301BF007B9337 /* RootNavigationPresenter.swift */,
-				8F5C9AC3281301BF007B9337 /* RootNavigationRouter.swift */,
-				8F5C9AC4281301BF007B9337 /* RootNavigationController.swift */,
-				8F5C9AC5281301BF007B9337 /* RootNavigationAssembly.swift */,
-				8F5C9AC6281301BF007B9337 /* RootNavigationInteractor.swift */,
-			);
-			path = RootNavigation;
-			sourceTree = "<group>";
-		};
-		8F5C9ACE28130D03007B9337 /* UserStory */ = {
-			isa = PBXGroup;
-			children = (
-				8F5C9ACC28130796007B9337 /* UserStory.swift */,
-				8F5C9AC128130183007B9337 /* RootNavigation */,
-			);
-			path = UserStory;
-			sourceTree = "<group>";
-		};
-		8F5C9ACF281312FF007B9337 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				8F05872528121C85005680CE /* LaunchAssembly.swift */,
-			);
-			path = Launch;
 			sourceTree = "<group>";
 		};
 		EE4EB66D256097790042FF46 /* Supporting Files */ = {
@@ -124,8 +75,6 @@
 		EEF2FEF023FD9CF400E67F56 /* diffibleData */ = {
 			isa = PBXGroup;
 			children = (
-				8F5C9ACF281312FF007B9337 /* Launch */,
-				8F5C9ACE28130D03007B9337 /* UserStory */,
 				EE4EB66D256097790042FF46 /* Supporting Files */,
 				EEF2FEFF23FD9CF500E67F56 /* LaunchScreen.storyboard */,
 				EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */,
@@ -161,10 +110,7 @@
 			);
 			name = diffibleData;
 			packageProductDependencies = (
-				8F9F2A652815EB0B0033D125 /* Managers */,
-				8F9F2A682815EB3E0033D125 /* Authorization */,
-				8F9F2A6B2815EB5A0033D125 /* Account */,
-				8F9F2A6E2815EB7F0033D125 /* AuthorizedZone */,
+				8FB8E3A1281C55DB0074E312 /* Root */,
 			);
 			productName = diffibleData;
 			productReference = EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */;
@@ -195,10 +141,7 @@
 			);
 			mainGroup = EEF2FEE523FD9CF400E67F56;
 			packageReferences = (
-				8F9F2A642815EB0B0033D125 /* XCRemoteSwiftPackageReference "Managers" */,
-				8F9F2A672815EB3E0033D125 /* XCRemoteSwiftPackageReference "Authorization" */,
-				8F9F2A6A2815EB5A0033D125 /* XCRemoteSwiftPackageReference "Account" */,
-				8F9F2A6D2815EB7F0033D125 /* XCRemoteSwiftPackageReference "AuthorizedZone" */,
+				8FB8E3A0281C55DB0074E312 /* XCRemoteSwiftPackageReference "Root" */,
 			);
 			productRefGroup = EEF2FEEF23FD9CF400E67F56 /* Products */;
 			projectDirPath = "";
@@ -228,15 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F05872628121C85005680CE /* LaunchAssembly.swift in Sources */,
-				8F5C9ACA281301BF007B9337 /* RootNavigationAssembly.swift in Sources */,
-				8F5C9ACB281301BF007B9337 /* RootNavigationInteractor.swift in Sources */,
 				EEF2FEF223FD9CF400E67F56 /* AppDelegate.swift in Sources */,
-				8F5C9AC9281301BF007B9337 /* RootNavigationController.swift in Sources */,
-				8F5C9AC8281301BF007B9337 /* RootNavigationRouter.swift in Sources */,
 				EEF2FEF423FD9CF400E67F56 /* SceneDelegate.swift in Sources */,
-				8F5C9AC7281301BF007B9337 /* RootNavigationPresenter.swift in Sources */,
-				8F5C9ACD28130796007B9337 /* UserStory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,33 +372,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8F9F2A642815EB0B0033D125 /* XCRemoteSwiftPackageReference "Managers" */ = {
+		8FB8E3A0281C55DB0074E312 /* XCRemoteSwiftPackageReference "Root" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/arman095095/Managers.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-		8F9F2A672815EB3E0033D125 /* XCRemoteSwiftPackageReference "Authorization" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/arman095095/Authorization.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-		8F9F2A6A2815EB5A0033D125 /* XCRemoteSwiftPackageReference "Account" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/arman095095/Account.git";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
-		8F9F2A6D2815EB7F0033D125 /* XCRemoteSwiftPackageReference "AuthorizedZone" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/arman095095/AuthorizedZone.git";
+			repositoryURL = "https://github.com/arman095095/Root.git";
 			requirement = {
 				branch = develop;
 				kind = branch;
@@ -471,25 +383,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8F9F2A652815EB0B0033D125 /* Managers */ = {
+		8FB8E3A1281C55DB0074E312 /* Root */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8F9F2A642815EB0B0033D125 /* XCRemoteSwiftPackageReference "Managers" */;
-			productName = Managers;
-		};
-		8F9F2A682815EB3E0033D125 /* Authorization */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8F9F2A672815EB3E0033D125 /* XCRemoteSwiftPackageReference "Authorization" */;
-			productName = Authorization;
-		};
-		8F9F2A6B2815EB5A0033D125 /* Account */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8F9F2A6A2815EB5A0033D125 /* XCRemoteSwiftPackageReference "Account" */;
-			productName = Account;
-		};
-		8F9F2A6E2815EB7F0033D125 /* AuthorizedZone */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8F9F2A6D2815EB7F0033D125 /* XCRemoteSwiftPackageReference "AuthorizedZone" */;
-			productName = AuthorizedZone;
+			package = 8FB8E3A0281C55DB0074E312 /* XCRemoteSwiftPackageReference "Root" */;
+			productName = Root;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
