@@ -32,6 +32,6 @@ final class ApplicationAssembly {
     }
     
     static func assembleAuthorizedZone(container: Container, context: AccountManagerContext) {
-        AuthorizedZoneUserStoryAssembly.assemble(container: container, context: context)
+        AuthorizedZoneUserStoryAssembly.assemble(container: container)
     }
 }

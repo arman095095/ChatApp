@@ -16,11 +16,18 @@ import Managers
 import Profile
 
 protocol RootNavigationRouterInput: AnyObject {
-    func openAuthorizationModule(output: AuthorizationModuleOutput, container: Container)
-    func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container)
-    func openAccountCreationModule(output: AccountModuleOutput, container: Container)
-    func openAccountEditModule(output: AccountModuleOutput, container: Container)
-    func openProfileModule(profile: ProfileModelProtocol, container: Container, output: ProfileModuleOutput)
+    func openAuthorizationModule(output: AuthorizationModuleOutput,
+                                 container: Container)
+    func openAuthorizedZone(context: InputFlowContext,
+                            output: AuthorizedZoneModuleOutput,
+                            container: Container)
+    func openAccountCreationModule(output: AccountModuleOutput,
+                                   container: Container)
+    func openAccountEditModule(output: AccountModuleOutput,
+                               container: Container)
+    func openProfileModule(profile: ProfileModelProtocol,
+                           container: Container,
+                           output: ProfileModuleOutput)
 }
 
 final class RootNavigationRouter {
@@ -28,9 +35,11 @@ final class RootNavigationRouter {
 }
 
 extension RootNavigationRouter: RootNavigationRouterInput {
-    
-    func openAuthorizedZone(output: AuthorizedZoneModuleOutput, container: Container) {
-        let module = AuthorizedZoneUserStory(container: container).rootModule()
+
+    func openAuthorizedZone(context: InputFlowContext,
+                            output: AuthorizedZoneModuleOutput,
+                            container: Container) {
+        let module = AuthorizedZoneUserStory(container: container).rootModule(context: context)
         module.output = output
         transitionHandler?.setViewControllers([module.view], animated: true)
     }
