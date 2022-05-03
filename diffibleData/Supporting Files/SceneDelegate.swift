@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         ApplicationAssembly().assemble(container: container)
         let launchModule = LaunchUserStory(container: container).rootModule()
         window?.rootViewController = launchModule.view
+        window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
     }
 }
