@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6175F52824898800F83077 /* Root in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6175F42824898800F83077 /* Root */; };
 		EE56EB33240531A4000D8ABC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */; };
 		EE87BB622407D7A00016C4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE87BB612407D7A00016C4BE /* Assets.xcassets */; };
 		EEF2FEF223FD9CF400E67F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2FEF123FD9CF400E67F56 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6175F52824898800F83077 /* Root in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +118,7 @@
 			);
 			name = diffibleData;
 			packageProductDependencies = (
+				8F6175F42824898800F83077 /* Root */,
 			);
 			productName = diffibleData;
 			productReference = EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */;
@@ -146,6 +149,7 @@
 			);
 			mainGroup = EEF2FEE523FD9CF400E67F56;
 			packageReferences = (
+				8F6175F32824898800F83077 /* XCRemoteSwiftPackageReference "Root" */,
 			);
 			productRefGroup = EEF2FEEF23FD9CF400E67F56 /* Products */;
 			projectDirPath = "";
@@ -374,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F6175F32824898800F83077 /* XCRemoteSwiftPackageReference "Root" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arman095095/Root.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F6175F42824898800F83077 /* Root */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6175F32824898800F83077 /* XCRemoteSwiftPackageReference "Root" */;
+			productName = Root;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEF2FEE623FD9CF400E67F56 /* Project object */;
 }
