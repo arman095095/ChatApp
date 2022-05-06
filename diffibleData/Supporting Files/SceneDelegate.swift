@@ -17,11 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let container = Container()
-        ApplicationAssembly().assemble(container: container)
-        let launchModule = LaunchUserStory(container: container).rootModule()
-        window?.rootViewController = launchModule.view
+        window?.rootViewController = rootViewController()
         window?.overrideUserInterfaceStyle = .light
         window?.makeKeyAndVisible()
+    }
+}
+
+private extension SceneDelegate {
+    func rootViewController() -> UIViewController {
+        let container = Container()
+        ApplicationAssembly().assemble(container: container)
+        return LaunchUserStory(container: container).rootModule().view
     }
 }
