@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>702532296621-57qj5gm9evrjjhigjonoqjlbbo0crr2e.apps.googleusercontent.com</string>
+	<string>602616483525-5he80og23t22tsmukodggqj4h9ejcla7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.702532296621-57qj5gm9evrjjhigjonoqjlbbo0crr2e</string>
+	<string>com.googleusercontent.apps.602616483525-5he80og23t22tsmukodggqj4h9ejcla7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDB3frDxwpOoFjAIQofXX1rAVyFzA8O0tQ</string>
+	<string>AIzaSyDlQqmH917M-JATijmcMsXeMIpfn-JvR3c</string>
 	<key>GCM_SENDER_ID</key>
-	<string>702532296621</string>
+	<string>602616483525</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Cocokigo.ChatChat</string>
+	<string>Cocokigo.ChamChat</string>
 	<key>PROJECT_ID</key>
-	<string>charchat-ff2ae</string>
+	<string>chamchat-c0c81</string>
 	<key>STORAGE_BUCKET</key>
-	<string>charchat-ff2ae.appspot.com</string>
+	<string>chamchat-c0c81.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:702532296621:ios:3bbbefefc9adaa0c8c8b24</string>
+	<string>1:602616483525:ios:ae7ddd1fb6554497d6aaac</string>
 </dict>
 </plist>
