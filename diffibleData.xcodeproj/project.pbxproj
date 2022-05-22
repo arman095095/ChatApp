@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F6175F52824898800F83077 /* Root in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6175F42824898800F83077 /* Root */; };
-		EE56EB33240531A4000D8ABC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */; };
+		8FCC8AAF283A13F900F8F735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FCC8AAE283A13F900F8F735 /* GoogleService-Info.plist */; };
 		EE87BB622407D7A00016C4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE87BB612407D7A00016C4BE /* Assets.xcassets */; };
 		EEF2FEF223FD9CF400E67F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2FEF123FD9CF400E67F56 /* AppDelegate.swift */; };
 		EEF2FEF423FD9CF400E67F56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2FEF323FD9CF400E67F56 /* SceneDelegate.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8FCC8AAE283A13F900F8F735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE87BB612407D7A00016C4BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF2FEEE23FD9CF400E67F56 /* CanvasTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF2FEF123FD9CF400E67F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 			children = (
 				EE4EB66D256097790042FF46 /* Supporting Files */,
 				EEF2FEFF23FD9CF500E67F56 /* LaunchScreen.storyboard */,
-				EE56EB32240531A4000D8ABC /* GoogleService-Info.plist */,
 				EE87BB612407D7A00016C4BE /* Assets.xcassets */,
+				8FCC8AAE283A13F900F8F735 /* GoogleService-Info.plist */,
 				EEF2FF0223FD9CF500E67F56 /* Info.plist */,
 				EEF2FEFC23FD9CF500E67F56 /* Preview Content */,
 			);
@@ -166,9 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF2FF0123FD9CF500E67F56 /* LaunchScreen.storyboard in Resources */,
+				8FCC8AAF283A13F900F8F735 /* GoogleService-Info.plist in Resources */,
 				EE87BB622407D7A00016C4BE /* Assets.xcassets in Resources */,
 				EEF2FEFE23FD9CF500E67F56 /* Preview Assets.xcassets in Resources */,
-				EE56EB33240531A4000D8ABC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cocokigo.chat;
+				PRODUCT_BUNDLE_IDENTIFIER = Cocokigo.ChatChat;
 				PRODUCT_NAME = CanvasTemplate;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -349,7 +349,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Cocokigo.chat;
+				PRODUCT_BUNDLE_IDENTIFIER = Cocokigo.ChatChat;
 				PRODUCT_NAME = CanvasTemplate;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

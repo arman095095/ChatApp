@@ -3,34 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>639458612399-24jsjsqcqutkp6jd1p05bnn2ovolt9o3.apps.googleusercontent.com</string>
+	<string>702532296621-57qj5gm9evrjjhigjonoqjlbbo0crr2e.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.639458612399-24jsjsqcqutkp6jd1p05bnn2ovolt9o3</string>
+	<string>com.googleusercontent.apps.702532296621-57qj5gm9evrjjhigjonoqjlbbo0crr2e</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC097REi_geXWuMySPggw7lCJlQFI-8c7Y</string>
+	<string>AIzaSyDB3frDxwpOoFjAIQofXX1rAVyFzA8O0tQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>639458612399</string>
+	<string>702532296621</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Cocokigo.diffibleData</string>
+	<string>Cocokigo.ChatChat</string>
 	<key>PROJECT_ID</key>
-	<string>ichat-feff0</string>
+	<string>charchat-ff2ae</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ichat-feff0.appspot.com</string>
+	<string>charchat-ff2ae.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:639458612399:ios:aa8a1e8759e3bcdc83b05a</string>
-	<key>DATABASE_URL</key>
-	<string>https://ichat-feff0.firebaseio.com</string>
+	<string>1:702532296621:ios:3bbbefefc9adaa0c8c8b24</string>
 </dict>
 </plist>
